@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Systems | Virus Intelligence Database</title>
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --bg: #050505;
+            --card: #111;
+            --text: #ffffff;
+            --gray: #a0a0a0;
+        }
+
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; scroll-behavior: smooth; }
+        
+        /* Navigation */
+        nav { background: rgba(0,0,0,0.9); padding: 20px 5%; position: fixed; width: 90%; top: 0; display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 1px solid #333; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Sections */
+        section { padding: 100px 10% 60px; min-height: 80vh; border-bottom: 1px solid #222; }
+        h2 { color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Facts & Figures */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .stat-card { background: var(--card); padding: 30px; border-radius: 10px; text-align: center; border: 1px solid #333; }
+        .stat-card h3 { font-size: 2rem; margin: 0; color: #ff4d4d; }
+
+        /* Virus Listing */
+        .virus-box { background: #1a1a1a; padding: 20px; margin-bottom: 20px; border-left: 4px solid var(--primary); border-radius: 4px; }
+        .virus-meta { color: var(--gray); font-size: 0.9rem; margin-bottom: 10px; }
+
+        /* Map Placeholder */
+        .map-placeholder { background: #333; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-top: 20px; color: var(--gray); }
+
+        /* Feedback Form */
+        form { display: flex; flex-direction: column; max-width: 500px; }
+        input, textarea { background: #222; border: 1px solid #444; color: white; padding: 12px; margin-bottom: 15px; border-radius: 5px; }
+        button { background: var(--primary); border: none; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight:bold; font-size:24px;">VERTEX <span style="color:var(--primary)">SYSTEMS</span></div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="types.html">Virus Types</a>
+            <a href="timeline.html">Year-wise</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h2>Digital Pathogen Overview</h2>
+        <p>Vertex Systems tracks the evolution of digital viruses. A computer virus is a type of malicious software that, when executed, replicates itself by modifying other computer programs and inserting its own code.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>$10.5T</h3>
+                <p>Annual Global Cybercrime Damage (2025 Est.)</p>
+            </div>
+            <div class="stat-card">
+                <h3>560k+</h3>
+                <p>New Malicious Samples Detected Daily</p>
+            </div>
+            <div class="stat-card">
+                <h3>$38B</h3>
+                <p>Damage caused by 'MyDoom' (Most Expensive)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Vertex Systems</h2>
+        <p>Founded in 2010, Vertex Systems is a global leader in cybersecurity intelligence and digital forensics. We provide real-time data on emerging threats to protect global infrastructure.</p>
+    </section>
+
+    <section id="types">
+        <h2>Types of Viruses</h2>
+        <div class="virus-box">
+            <h3>Ransomware</h3>
+            <p>Encrypts user data and demands payment for the decryption key.</p>
+            <div class="virus-meta">
+                <strong>Notable Example:</strong> WannaCry | <strong>Year:</strong> 2017 | <strong>Origin:</strong> Global/North Korea
+            </div>
+            <p><strong>Precautions:</strong> Regular offline backups, updated OS patches, and multi-factor authentication.</p>
+        </div>
+
+        <div class="virus-box">
+            <h3>Trojan Horse</h3>
+            <p>Disguises itself as legitimate software to gain unauthorized access to a system.</p>
+            <div class="virus-meta">
+                <strong>Notable Example:</strong> Emotet | <strong>Year:</strong> 2014 | <strong>Origin:</strong> Europe
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <h2>Year-Wise Global Outbreaks</h2>
+        <ul>
+            <li><strong>1986: Brain</strong> - The first IBM PC virus. Origin: Lahore, Pakistan.</li>
+            <li><strong>1999: Melissa</strong> - Fast-spreading email worm. Origin: New Jersey, USA.</li>
+            <li><strong>2010: Stuxnet</strong> - Targeted industrial systems. Origin: Undisclosed.</li>
+        </ul>
+        <div class="map-placeholder">
+            [ Interactive Geolocation Map: Tracking Outbreak Hotspots ]
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Headquarters:</strong> 500 Vertex Tower, Tech District, San Francisco, CA</p>
+        <div class="map-placeholder" style="height:200px;">
+            [ Google Maps Embed: Vertex Systems HQ ]
+       </div> 
+
+        <h2 style="margin-top:50px;">Feedback</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Was this information helpful?"></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+</body>
+</html>
+
+
